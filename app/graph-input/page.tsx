@@ -75,7 +75,7 @@ export default function GraphInputPage() {
     const matchedRow = eegData.find(row => {
       return Object.entries(row)
         .filter(([key]) => key !== "Unnamed" && key !== "y")
-        .map(([, value]) => parseFloat(String(value)));
+        .map(([, value]) => parseFloat(String(value)))
         .every((value, index) => value === selectedPoints[index]);
     });
 
