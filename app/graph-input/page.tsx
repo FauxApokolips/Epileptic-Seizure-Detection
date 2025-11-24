@@ -47,7 +47,7 @@ export default function GraphInputPage() {
       // Extract the values of the row (excluding the "Unnamed" column and "y")
       const values = Object.entries(matchedRow)
         .filter(([key]) => key !== "Unnamed" && key !== "y")
-        .map(([, value]) => parseFloat(value));
+        .map(([, value]) => parseFloat(String(value)));
 
       setSelectedPoints(values);
       setShowValues(false);
