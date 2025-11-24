@@ -211,14 +211,14 @@ export default function GraphInputPage() {
         <div className="mt-4 bg-gray-800 p-4 rounded">
           <h2 className="text-xl font-bold">Selected Row Values:</h2>
           <div className="mt-2 grid grid-cols-4 gap-2">
-            {Object.entries(matchedRow)
-    .filter(([key]) => key !== "Unnamed" && key !== "y")
-    .map(([key, value], index) => (
-      <div key={index} className="bg-blue-600 text-white p-2 rounded">
-        {key}: {value}
-      </div>
-    ))}
-</div>
+            {Object.entries(selectedRow)
+              .filter(([key]) => key !== "Unnamed" && key !== "y")
+              .map(([key, value], index) => (
+                <div key={index} className="bg-blue-600 text-white p-2 rounded">
+                  {key}: {String(value)}
+                </div>
+              ))}
+          </div>
         </div>
       )}
 
